@@ -24,14 +24,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: .  # or your build directory like 'dist' or 'build'
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
