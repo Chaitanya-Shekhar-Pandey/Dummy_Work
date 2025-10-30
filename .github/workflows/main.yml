@@ -1,0 +1,28 @@
+name: Deploy using Github Actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+     - name: Setup Page
+       uses: actions/configure-page@v3
+
+     - name: Upload Artifact
+       uses: actions/upload-page-artifact@v2
+       with:
+        path: .
+
+     - name: Deploy to Github Page
+       uses: actions/deploy-pages@v2
+        
