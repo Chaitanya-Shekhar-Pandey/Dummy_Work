@@ -1,6 +1,8 @@
 name: Deploy using Github Actions
 
 on:
+  workflow_dispatch:
+
   push:
     branches:
       - main
