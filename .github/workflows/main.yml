@@ -1,12 +1,14 @@
 name: Deploy using Github Actions
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
